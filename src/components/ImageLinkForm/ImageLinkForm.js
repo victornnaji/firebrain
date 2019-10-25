@@ -5,9 +5,9 @@ const ImageLinkForm = () => {
     return (
         <div className="ImageLinkForm">
            <div className="container">
-                <form class="form">
-                    <input type="url" class="form__field" placeholder="Your Image link" />
-                    <button type="button" class="btn">Send</button>
+                <form className="form">
+                    <input type="url" className="form__field" placeholder="https://" />
+                    <button type="submit" className="btn">Detect</button>
                 </form>
            </div>
         </div>

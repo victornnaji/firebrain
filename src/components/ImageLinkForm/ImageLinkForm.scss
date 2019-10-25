@@ -15,6 +15,7 @@ $button-text-color: #fff;
     width: 70%;
     display: flex;
     justify-content: space-between;
+    z-index: 1;
     @media (max-width: 1024px){
         width: 100%;
         flex-direction: column;
@@ -28,13 +29,16 @@ $button-text-color: #fff;
     font-size: 1.5rem;
     border-radius: 5px;
     margin-right: 2rem;
+    color: #6b6969;
 }
 
 .btn {
     padding: 2rem 6rem;
+    font-family: inherit;
     background:#7BC6CC;
     color: white;
     font-size: 1.3rem;
+    text-transform: uppercase;
 
     &:hover{
         background-color: darken($color: #7BC6CC, $amount: 10%);
