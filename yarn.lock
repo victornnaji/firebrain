@@ -8496,24 +8496,6 @@ request@^2.87.0, request@^2.88.0:
     tunnel-agent "^0.6.0"
     uuid "^3.3.2"
 
-request@~2.27.0:
-  version "2.27.0"
-  resolved "https://registry.yarnpkg.com/request/-/request-2.27.0.tgz#dfb1a224dd3a5a9bade4337012503d710e538668"
-  integrity sha1-37GiJN06Wput5DNwElA9cQ5Thmg=
-  dependencies:
-    aws-sign "~0.3.0"
-    cookie-jar "~0.3.0"
-    forever-agent "~0.5.0"
-    form-data "~0.1.0"
-    hawk "~1.0.0"
-    http-signature "~0.10.0"
-    json-stringify-safe "~5.0.0"
-    mime "~1.2.9"
-    node-uuid "~1.4.0"
-    oauth-sign "~0.3.0"
-    qs "~0.6.0"
-    tunnel-agent "~0.6.0"
-
 require-directory@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/require-directory/-/require-directory-2.1.1.tgz#8c64ad5fd30dab1c976e2344ffe7f792a6a6df42"
