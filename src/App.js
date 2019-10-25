@@ -1,5 +1,6 @@
 import React from 'react';
 import Navigation from './components/Navigation/Navigation';
+import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
 
 
 function App() {
@@ -7,7 +8,7 @@ function App() {
     <div className="App">
       <div className="container">
         <Navigation />
-        
+        <ImageLinkForm />
       </div>
     </div>
   );

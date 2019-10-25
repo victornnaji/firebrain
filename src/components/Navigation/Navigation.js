@@ -6,7 +6,7 @@ const Navigation = () => {
     return (
         <nav>
              <Logo />
-            <p className="link">Sign Out</p>
+            <div className="link">Sign Out</div>
         </nav>
     )
 }

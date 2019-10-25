@@ -1,0 +1,52 @@
+$button-bg-color: #7f8ff4;
+$button-text-color: #fff;
+
+.ImageLinkForm{
+    margin-top: 5rem;
+    height: 30rem;
+
+    .container{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.form{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 1024px){
+        width: 100%;
+        flex-direction: column;
+    }
+}
+
+.form__field{
+    border: none;
+    padding: 2rem 1rem;
+    width: 100%;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    margin-right: 2rem;
+}
+
+.btn {
+    padding: 2rem 6rem;
+    background:#7BC6CC;
+    color: white;
+    font-size: 1.3rem;
+
+    &:hover{
+        background-color: darken($color: #7BC6CC, $amount: 10%);
+        color:white;
+    }
+    @media (max-width: 1024px){
+        align-self: center;
+        margin-top: 1rem;
+    }
+
+    &:focus, &:active{
+        outline: none;
+        box-shadow: none;
+    }
+}
