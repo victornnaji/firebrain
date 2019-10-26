@@ -1,0 +1,42 @@
+.faceRecognition-container{
+    margin-top: -20rem;
+
+    @media (max-width: 1034px){
+        margin-top: -14rem;
+    }
+
+    .container{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.image-container-overlay{
+  width: 110%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.image-holder{
+    z-index: 5;
+    position: relative;
+    @media (min-width: 1024px){
+        max-width: 50%;
+    }
+}
+
+.bounding-box{
+    position: absolute;
+    box-shadow: 0 0 0 3px #149df2 inset;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 9;
+}

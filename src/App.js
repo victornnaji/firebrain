@@ -1,9 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Navigation from './components/Navigation/Navigation';
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
 import Rank from './components/Rank/Rank';
 import Particles from 'react-particles-js';
+import Clarifai from 'clarifai';
 import "./App.scss";
+import FaceRecognition from './components/FaceRecognition/FaceRecognition';
 
 const particlesOptions = {
   "particles": {
@@ -28,14 +30,46 @@ const particlesOptions = {
 }
 }
 
+const app = new Clarifai.App({
+  apiKey: '08c85db1dc94491fb05c0d224671e401'
+ });
+
+ 
+
 function App() {
+  const [image, setImage] = useState("");
+  const [clariface, setclariface] = useState([])
+  
+
+  const calFaceLocation = async (data) => {
+    const clarifaiFace = data.outputs[0].data.regions;
+    setclariface(clarifaiFace);
+   }
+  
+
+ const onSearchSubmit = (terms) =>{
+  app.models.predict(Clarifai.FACE_DETECT_MODEL, `${terms}`).then(response => {
+    setImage(terms);
+    return response;
+  }).then(
+    data => {
+      calFaceLocation(data);
+    }
+  ).catch(err => {
+    console.log(err);
+  })
+ }
+
+ 
+
   return (
     <div className="App">
       <div className="container">
       <Particles params={particlesOptions} className="particles"/>
         <Navigation />
         <Rank />
-        <ImageLinkForm />
+        <ImageLinkForm onSubmitt={onSearchSubmit}/>
+        <FaceRecognition image={image} clariface={clariface}/>
       </div>
     </div>
   );
