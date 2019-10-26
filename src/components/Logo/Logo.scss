@@ -1,11 +1,10 @@
 .Tilt{
-    // background: transparent;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    // position: absolute;
-    // top: 2rem;
-    // height: 10rem !important;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    height: 10rem !important;
     z-index: 4;
 
     @media (max-width: 1024px){
@@ -15,5 +14,9 @@
         left: -2.5rem !important;
     }
 
+}
 
+.Tilt-inner{
+    position: absolute !important;
+    top: -1rem !important;
 }

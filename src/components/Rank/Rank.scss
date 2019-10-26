@@ -13,8 +13,12 @@
 }
 
 .rank-content{
+
+    @media(max-width: 1024px){
+        text-align: center;
+    }
     span{
-        margin-left: 1rem;
+        margin-left: -.5rem;
         color: white;
     }
 }

@@ -39,15 +39,14 @@ const app = new Clarifai.App({
 function App() {
   const [image, setImage] = useState("");
   const [clariface, setclariface] = useState([])
-  
 
   const calFaceLocation = async (data) => {
-    const clarifaiFace = data.outputs[0].data.regions;
-    setclariface(clarifaiFace);
+    const clariface = data.outputs[0].data.regions;
+    setclariface(clariface);
    }
   
 
- const onSearchSubmit = (terms) =>{
+ const onSearchSubmit = async (terms) =>{
   app.models.predict(Clarifai.FACE_DETECT_MODEL, `${terms}`).then(response => {
     setImage(terms);
     return response;
@@ -67,7 +66,6 @@ function App() {
       <div className="container">
       <Particles params={particlesOptions} className="particles"/>
         <Navigation />
-        <Rank />
         <ImageLinkForm onSubmitt={onSearchSubmit}/>
         <FaceRecognition image={image} clariface={clariface}/>
       </div>
