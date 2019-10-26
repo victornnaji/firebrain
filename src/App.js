@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import Navigation from './components/Navigation/Navigation';
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
-import Rank from './components/Rank/Rank';
+// import Rank from './components/Rank/Rank';
 import Particles from 'react-particles-js';
 import Clarifai from 'clarifai';
 import "./App.scss";
@@ -38,7 +38,8 @@ const app = new Clarifai.App({
 
 function App() {
   const [image, setImage] = useState("");
-  const [clariface, setclariface] = useState([])
+  const [clariface, setclariface] = useState([]);
+  const [btn, setbtn] = useState('')
 
   const calFaceLocation = async (data) => {
     const clariface = data.outputs[0].data.regions;
@@ -59,6 +60,10 @@ function App() {
   })
  }
 
+ const onButtonClick = (value) => {
+   setbtn(value)
+ }
+
  
 
   return (
@@ -66,8 +71,8 @@ function App() {
       <div className="container">
       <Particles params={particlesOptions} className="particles"/>
         <Navigation />
-        <ImageLinkForm onSubmitt={onSearchSubmit}/>
-        <FaceRecognition image={image} clariface={clariface}/>
+        <ImageLinkForm  onSubmitt={onSearchSubmit} onButtonClick={onButtonClick}/>
+        <FaceRecognition  image={image} clariface={clariface} btnState={btn}/>
       </div>
     </div>
   );
