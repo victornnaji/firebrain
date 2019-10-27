@@ -6,7 +6,7 @@ import Particles from 'react-particles-js';
 import Clarifai from 'clarifai';
 import "./App.scss";
 import FaceRecognition from './components/FaceRecognition/FaceRecognition';
-import Signin from './components/SignIn/Signin';
+
 
 const particlesOptions = {
   "particles": {
@@ -74,7 +74,6 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-      <Signin />
       <Particles params={particlesOptions} className="particles"/>
         <Navigation 
         // getBtnState={getBtnState}
