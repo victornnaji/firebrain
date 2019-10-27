@@ -29,7 +29,6 @@ const FaceRecognition = ({image, clariface, btnState}) => {
     setloading(btnState);
   },[btnState]);
 
-
   const onImageLoad = () =>{
     setloading(false);
   }

@@ -17,8 +17,8 @@ const Navigation = () => {
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div className="navbar-nav">
                         <div className="link" onClick={ () => setlink('General Face')}>General Face</div>
-                        <div className="link" onClick={ () => setlink('Detect Celebrities')}>Detect Celebrities</div>
-                        <div className="link" onClick={ () => setlink('Detect Items')}>Detect Items</div>
+                        {/* <div className="link" onClick={ () => setlink('Detect Celebrities')}>Detect Celebrities</div>
+                        <div className="link" onClick={ () => setlink('Detect Items')}>Detect Items</div> */}
                         <div className="link">Sign Out</div>
                     </div>
                 </div>

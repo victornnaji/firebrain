@@ -6,6 +6,7 @@ import Particles from 'react-particles-js';
 import Clarifai from 'clarifai';
 import "./App.scss";
 import FaceRecognition from './components/FaceRecognition/FaceRecognition';
+import Signin from './components/SignIn/Signin';
 
 const particlesOptions = {
   "particles": {
@@ -64,13 +65,20 @@ function App() {
    setbtn(value)
  }
 
+//  const getBtnState = (link) =>{
+//    console.log(link);
+//  }
+
  
 
   return (
     <div className="App">
       <div className="container">
+      <Signin />
       <Particles params={particlesOptions} className="particles"/>
-        <Navigation />
+        <Navigation 
+        // getBtnState={getBtnState}
+        />
         <ImageLinkForm  onSubmitt={onSearchSubmit} onButtonClick={onButtonClick}/>
         <FaceRecognition  image={image} clariface={clariface} btnState={btn}/>
       </div>
