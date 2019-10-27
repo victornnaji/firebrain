@@ -24,8 +24,9 @@ The first version of my face detection app built with **React** and hosted with 
    yarn start
    ```
 ## 🧐 What's inside?
-
 A quick look at the top-level files and directories in this project.
+
+
     .
     ├── node_modules
     ├── public
@@ -43,7 +44,7 @@ A quick look at the top-level files and directories in this project.
     ├── LICENSE
     ├── package.json
     ├── README.md
-    ├── yarn.lock
+    └── yarn.lock
 
 # What's Next?
 This App will be constantly updated to include more features like
